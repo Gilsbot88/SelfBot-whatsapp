@@ -183,7 +183,7 @@ let sortedCmd = Object.entries(global.db.data.stats).map(([key, value]) => {
       'https://i.ibb.co/BtPgLhG/036492dd36f7fc55e1f5ee705a4080e0.jpg'
     ]
    
-    conn.sendButtonLoc(m.chat, pRandom(arr), text, conn.menu?.after || defaultMenu.after || '© 파리드', 'DASHBOARD', _p+'dashboard')
+    conn.sendButtonLoc(m.chat, pRandom(arr), text, conn.menu?.after || defaultMenu.after || '© 아르망', 'DASHBOARD', _p+'dashboard')
      
 
    } catch (e) {
