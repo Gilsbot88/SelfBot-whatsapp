@@ -41,7 +41,7 @@ global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ/i!#$%+£¢€¥^°
 //     new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`)
 // )
 
-global.db = new(new CloudDBAdapter('https://parit-databess.fariidoke.repl.co/'))
+global.db = new(new cloudDBAdapter('https://parit-databess.fariidoke.repl.co/'))
 
 global.DATABASE = global.db // Backwards Compatibility
 
