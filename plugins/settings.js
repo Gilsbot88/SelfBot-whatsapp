@@ -3,8 +3,12 @@ let handler = async (m, { usedPrefix, command, conn, args }) => {
     let chat = db.data.chats[m.chat]
     let setting = db.data.settings[conn.user.jid]
     if (args.length == 0) return conn.send2Button(m.chat, "Mau di aktifkan atau di matikan? pilih di bawah!", "", "On", `${usedPrefix+command} on`, "Off", `${usedPrefix+command} off`)
+    //Anti link group
+    if (/antilink/.test(command)){
+        chat.antiLink = isEnable;
+        m.reply(`Anti link group ( ${isEnable?'Di Aktifkan':'Di Matikan'} )`)
     //anti view once
-    if (/antiviewonce/.test(command)){
+    } else if (/antiviewonce/.test(command)){
         chat.antiviewonce = isEnable;
             m.reply(`*ANTI VIEW-ONCE* ( ${isEnable?'Di Aktifkan':'Di Matikan'} )`)
     //anti delete
@@ -27,7 +31,7 @@ let handler = async (m, { usedPrefix, command, conn, args }) => {
 }
 
 handler.tags = ['owner']
-handler.help = ['anticall', 'autoread', 'welcome', 'antiviewonce', 'antidelete'].map(pp=>pp+` ${inOption('on/off')}`)
-handler.command = /(anti(call|viewonce|delete)|autoread|welcome)$/i
+handler.help = ['antilink', 'anticall', 'autoread', 'welcome', 'antiviewonce', 'antidelete'].map(pp=>pp+` ${inOption('on/off')}`)
+handler.command = /(anti(link(gro?up|gc)?|call|viewonce|delete)|autoread|welcome)$/i
 handler.owner = true
 module.exports = handler
