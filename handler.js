@@ -58,11 +58,11 @@ module.exports = {
         if (setting) {
           if (!('anticall' in setting)) setting.anticall = false
           if (!('autoread' in setting)) setting.autoread = false
-          if (!('self' in setting)) setting.self = true
+          if (!('self' in setting)) setting.self = false
         } else global.db.data.settings[this.user.jid] = {
           anticall: false,
           autoread: false,
-          self: true,
+          self: false,
         }
       } catch (e) {
         console.error(e)
