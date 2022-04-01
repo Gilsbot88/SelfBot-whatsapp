@@ -46,9 +46,8 @@ module.exports = {
         } else global.db.data.chats[m.chat] = {
           antiLink: false,
           antidelete: false,
-          antiviewonce: true,
+          antiviewonce: false,
           isMute: false,
-          welcome: false,
           sWelcome: '',
           sBye: ''
         }
