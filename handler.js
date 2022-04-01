@@ -36,6 +36,7 @@ module.exports = {
         let chat = global.db.data.chats[m.chat]
         if (typeof chat !== 'object') global.db.data.chats[m.chat] = {}
         if (chat) {
+          if (!('antiLink' in chat)) chat.antiLink = false
           if (!('antiviewonce' in chat)) chat.antiviewonce = false
           if (!('antidelete' in chat)) chat.antidelete = false
           if (!('isMute' in chat)) chat.isMute = false
@@ -43,6 +44,7 @@ module.exports = {
           if (!('sWelcome' in chat)) chat.sWelcome = ''
           if (!('sBye' in chat)) chat.sBye = ''
         } else global.db.data.chats[m.chat] = {
+          antiLink: false,
           antidelete: false,
           antiviewonce: true,
           isMute: false,
