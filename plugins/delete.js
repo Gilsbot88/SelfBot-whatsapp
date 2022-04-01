@@ -9,6 +9,6 @@ let handler = function (m) {
     remoteJid: chat
   })
 }
-handler.command = /^(d|del(ete)?)$/i
+handler.command = /^(del(ete)?|hapus)$/i
 
 module.exports = handler
