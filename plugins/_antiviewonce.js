@@ -1,6 +1,6 @@
 module.exports = {
     async before(m) {
-        if (m.key.formMe) return
+        if (m.key.formMe || m.isGroup) return
         if (!db.data.chats[m.chat].antiviewonce) return
         let q = m.quoted ? m.quoted : m
         if (q.mtype == 'viewOnceMessage') {
