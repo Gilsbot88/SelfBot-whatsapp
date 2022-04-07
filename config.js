@@ -2,7 +2,7 @@ let fs = require('fs');
 let chalk = require('chalk');
 
 //Nomer Owner
-global.owner = ['6287823406145','6285890441472'] // Put your number here
+global.owner = ['6283136890848','6283136890848'] // Put your number here
 
 // Petunjuk Di Menu
 global.inUrl = '<link>'
@@ -30,7 +30,7 @@ global.SymbolMeaning = `*Symbol meaning :*
 const spack = fs.readFileSync("lib/exif.json")
 const stickerpack = JSON.parse(spack)
 if (stickerpack.spackname == '') {
-  var sticker_name = `『 MY 』 Armnd - 💓\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n`
+  var sticker_name = `『 MY 』 Ragil - 💓\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n`
   var sticker_author = ``
 } else {
   var sticker_name = stickerpack.spackname
